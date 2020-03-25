@@ -1,0 +1,116 @@
+/*
+GENERAL STYLE
+ */
+
+body {
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    border-radius: 20px;
+    padding: 20px 10px;
+}
+
+.container {
+    width: 100%;
+    margin: 10px 0;
+    display: flex;
+}
+
+.switchLabelText {
+    flex: 1;
+    font-size: 14px;
+    font-weight: bold;
+    max-width: 50px;
+    margin-top: 2px;
+}
+
+h1 {
+    color: #999;
+    font-family: arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 1px;
+    text-decoration: underline;
+}
+
+/*
+SWITCH KEY STYLE
+ */
+
+.onoffswitch {
+    position: relative;
+    width: 70px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+    display: none;
+}
+
+.onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #999999;
+    border-radius: 20px;
+}
+
+.onoffswitch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 18px;
+    padding: 18px;
+    line-height: 18px;
+    font-size: 14px;
+    font-family: "Trebuchet ", Arial, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 10px;
+    background-color: #34a7c1;
+    color: #ffffff;
+}
+
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: #eeeeee;
+    color: #999999;
+    text-align: right;
+}
+
+.onoffswitch-switch {
+    display: block;
+    width: 15px;
+    margin: 2px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 48px;
+    border: 2px solid #999999;
+    transition: all .3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked .onoffswitch-label .onoffswitch-switch {
+    right: 0;
+}
