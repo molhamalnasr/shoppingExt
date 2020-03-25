@@ -40,7 +40,7 @@ document.getElementById('cusDropdown').addEventListener('click', ev => {
         var clickedImgId = ev.target.id;
         chrome.tabs.query({active: true, currentWindow: true}, function (activeTabs) {
             chrome.tabs.executeScript(activeTabs[0].id, {
-                code: `var imgId = ${clickedImgId}`
+                code: `var imgId = "${clickedImgId}"`
             }, function () {
                 chrome.tabs.executeScript(activeTabs[0].id, {file: 'insertImg.js'});
             });
