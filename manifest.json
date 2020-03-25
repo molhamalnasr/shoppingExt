@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "name": "ShoppingExt",
+  "description": "add Molham's photo into shopping websites",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "css": [
+
+      ],
+      "js": [
+
+      ],
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ]
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": ""
+  },
+  "icons": {
+    "16": "",
+    "32": "",
+    "48": "",
+    "128": ""
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "storage",
+    "https://*/*",
+    "http://*/*"
+  ]
+}
