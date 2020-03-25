@@ -35,6 +35,19 @@ document.getElementById('shoeSwitchKey').addEventListener('change', function () 
     });
 });
 
+document.getElementById('cusDropdown').addEventListener('click', ev => {
+    if (ev.target.className === 'selImg') {
+        var clickedImgId = ev.target.id;
+        chrome.tabs.query({active: true, currentWindow: true}, function (activeTabs) {
+            chrome.tabs.executeScript(activeTabs[0].id, {
+                code: `var imgId = ${clickedImgId}`
+            }, function () {
+                chrome.tabs.executeScript(activeTabs[0].id, {file: 'insertImg.js'});
+            });
+        });
+    }
+});
+
 function dropdownVisibility(checked) {
     const getDrobdown = document.getElementById('cusDropdown');
     if (checked === true) {
