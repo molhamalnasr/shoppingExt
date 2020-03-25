@@ -1,0 +1,13 @@
+#resizable {
+    width: 200px;
+    position: fixed;
+    top: 20%;
+    margin-top: -50px;
+    left: 20%;
+    margin-left: -50px;
+    z-index: 9999;
+}
+
+#resizable img {
+    width: 100%;
+}

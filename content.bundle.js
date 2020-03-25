@@ -1,0 +1,1 @@
+console.log('content.bundle.js init');
