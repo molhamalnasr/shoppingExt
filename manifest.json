@@ -34,5 +34,8 @@
     "storage",
     "https://*/*",
     "http://*/*"
+  ],
+  "web_accessible_resources": [
+    "imgs/*.png"
   ]
 }
